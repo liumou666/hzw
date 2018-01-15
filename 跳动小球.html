@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.circle {
+				display: block;
+				background: black;
+				border-radius: 50%;
+				height: 200px;
+				width: 200px;
+				margin: 200px auto;
+				background: -webkit-radial-gradient(100px 100px, circle, #5cabff, #000);
+				animation:td  2.5s   steps(10);
+			}
+			
+			
+			@keyframes td{
+				from{
+					transform:translateY(0px);
+				}
+				/*50%{
+					transform:translateY(60px);
+				}*/
+				to{
+					transform:translateY(160px);
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="circle">
+			
+		</div>
+		
+	</body>
+
+</html>
