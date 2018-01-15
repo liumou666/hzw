@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=M5K1VAXBRgxsytspSPwakHZYHjpCKnlY"></script>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		navigator.geolocation.getCurrentPosition(function(position){
+			var wd = position.coords.latitude;
+			var jd = position.coords.longitude;
+			//实例化一个百度地图对象
+			var point = new BMap.Point(jd,wd);
+			//实例化一个坐标点转换对象
+			var mygeo = new BMap.Geocoder();
+			
+			
+			mygeo.getLocation(point,function(res){
+				var city = res.addressComponents.city;//将经纬度转换为地理位置
+				alert(city)
+			})
+			
+		})
+	</script>
+</html>
